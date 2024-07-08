@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>벌칙 뽑기 웹앱</title>
+    <!-- 부트스트랩 CDN 추가 -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">벌칙 뽑기</h1>
+
+        <!-- 친구 리스트 Card -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title mb-3">친구 리스트</h5>
+                <ul id="friendsList" class="list-group">
+                    <!-- 친구들이 추가될 부분 -->
+                </ul>
+                <div class="input-group mt-3">
+                    <input type="text" id="friendInput" class="form-control" placeholder="친구 이름을 입력하세요">
+                    <div class="input-group-append">
+                        <button id="addButton" class="btn btn-outline-primary" type="button">추가</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 벌칙 뽑기 설정 -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title mb-3">벌칙을 받을 인원 수</h5>
+                <div id="pickOptions" class="form-group">
+                    <label for="pickCount">벌칙을 받을 인원 수:</label>
+                    <input type="number" id="pickCount" class="form-control" min="1" value="1">
+                </div>
+                <button id="pickButton" class="btn btn-outline-success btn-block" disabled>뽑기 시작!</button>
+            </div>
+        </div>
+
+        <!-- 결과 표시 -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-3">결과</h5>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 부트스트랩 및 자바스크립트 파일 추가 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
